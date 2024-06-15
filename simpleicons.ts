@@ -15,9 +15,14 @@ export default function plugin(userOptions?: Options) {
 
   return (site: Lume.Site) => {
     site.filter(options.name, (name: string, info?: keyof SimpleIcon) => {
+      if (!name) {
+        return "";
+      }
+
       if (info) {
         return catalog.info(name)[info];
       }
+
       return catalog.get(name);
     }, true);
   };

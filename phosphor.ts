@@ -19,6 +19,10 @@ export default function plugin(userOptions?: Options) {
 
   return (site: Lume.Site) => {
     site.filter(options.name, (name: string, type?: PhosphorType) => {
+      if (!name) {
+        return "";
+      }
+
       return catalog.get(name, type);
     }, true);
   };
