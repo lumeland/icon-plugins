@@ -1,0 +1,14 @@
+{
+  "lock": false,
+  "tasks": {
+    "test": "deno test --allow-net"
+  },
+  "imports": {
+    "lume/": "https://deno.land/x/lume@v2.2.1/"
+  },
+  "compilerOptions": {
+    "types": [
+      "lume/types.ts"
+    ]
+  }
+}
