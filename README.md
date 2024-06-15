@@ -1,6 +1,6 @@
-# icons
+# Lume icon plugins
 
-A simple library to get icons from different collections in Lume.
+Plugins to work with different icon collections in Lume.
 
 ## Usage
 
@@ -8,7 +8,7 @@ A simple library to get icons from different collections in Lume.
 
 ```ts
 import lume from "lume/mod.ts";
-import simpleIcons from "lume_plugin_icons/simpleicons.ts";
+import simpleIcons from "lume_icon_plugins/simpleicons.ts";
 
 const site = lume();
 
@@ -28,7 +28,7 @@ In your templates:
 
 ```ts
 import lume from "lume/mod.ts";
-import phosphor from "lume_plugin_icons/phosphor.ts";
+import phosphor from "lume_icon_plugins/phosphor.ts";
 
 const site = lume();
 
