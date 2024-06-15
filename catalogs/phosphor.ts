@@ -44,7 +44,9 @@ export class Phosphor implements Catalog<PhosphorIcon> {
 
   get(name: string, type?: Type): Promise<string> {
     const info = this.info(name);
-    const url = `${assets}${type || this.defaultType}/${info.name}.svg`;
+    const iconType = type || this.defaultType;
+    const suffix = iconType === "regular" ? "" : `-${iconType}`;
+    const url = `${assets}${iconType}/${info.name}${suffix}.svg`;
 
     return fetchIcon(url);
   }
