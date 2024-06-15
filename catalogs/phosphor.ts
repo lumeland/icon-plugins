@@ -3,7 +3,7 @@ import type { Catalog } from "./catalog.ts";
 
 const assets = "https://unpkg.com/@phosphor-icons/core@2.1.1/assets/";
 
-type Type = "bold" | "duotone" | "fill" | "light" | "regular" | "thin";
+export type Type = "bold" | "duotone" | "fill" | "light" | "regular" | "thin";
 
 export type PhosphorIcon = {
   name: string;
@@ -42,7 +42,7 @@ export class Phosphor implements Catalog<PhosphorIcon> {
     return icons.map((icon) => icon.name);
   }
 
-  get(name: string, type?: string): Promise<string> {
+  get(name: string, type?: Type): Promise<string> {
     const info = this.info(name);
     const url = `${assets}${type || this.defaultType}/${info.name}.svg`;
 

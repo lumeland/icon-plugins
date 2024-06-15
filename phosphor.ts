@@ -1,6 +1,6 @@
 import phosphor, {
   type Options as PhosphorOptions,
-  PhosphorIcon,
+  type Type as PhosphorType,
 } from "./catalogs/phosphor.ts";
 
 export interface Options extends PhosphorOptions {
@@ -18,11 +18,8 @@ export default function plugin(userOptions?: Options) {
   const catalog = phosphor(options);
 
   return (site: Lume.Site) => {
-    site.filter(options.name, (name: string, info?: keyof PhosphorIcon) => {
-      if (info) {
-        return catalog.info(name)[info];
-      }
-      return catalog.get(name);
+    site.filter(options.name, (name: string, type?: PhosphorType) => {
+      return catalog.get(name, type);
     }, true);
   };
 }

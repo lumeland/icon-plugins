@@ -41,5 +41,5 @@ In your templates:
 
 ```
 {{ "acorn" |> phosphor }} # SVG code of the icon
-{{ "acorn" |> phosphor("pascal_name") }} # Returns icon info (pascal_name in this example)
+{{ "acorn" |> phosphor("duotone") }} # Returns the icon in duotone format
 ```
