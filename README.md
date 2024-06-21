@@ -43,3 +43,23 @@ In your templates:
 {{ "acorn" |> phosphor }} # SVG code of the icon
 {{ "acorn" |> phosphor("duotone") }} # Returns the icon in duotone format
 ```
+
+### [Heroicons](https://heroicons.com/)
+
+```ts
+import lume from "lume/mod.ts";
+import heroicons from "lume_icon_plugins/heroicons.ts";
+
+const site = lume();
+
+site.use(heroicons());
+
+export site;
+```
+
+In your templates:
+
+```
+{{ "face-smile" |> heroicons }} # SVG code of the icon
+{{ "face-smile" |> heroicons("outline") }} # Returns the icon in outline format
+```
