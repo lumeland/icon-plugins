@@ -13,10 +13,6 @@ export type { SimpleIcon };
 export class SimpleIcons implements Catalog<SimpleIcon> {
   name = "simpleicons";
 
-  get icons(): string[] {
-    return icons.map((icon) => icon.slug);
-  }
-
   get(name: string): string {
     const icon = icons.find((icon) => icon.slug === name);
 

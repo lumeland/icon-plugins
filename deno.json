@@ -11,5 +11,10 @@
     "types": [
       "lume/types.ts"
     ]
+  },
+  "fmt": {
+    "exclude": [
+      "CHANGELOG.md"
+    ]
   }
 }

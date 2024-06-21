@@ -1,4 +1,5 @@
 import { icons as pi } from "npm:@phosphor-icons/core@2.1.1";
+import { fetchIcon } from "./utils.ts";
 import type { Catalog } from "./catalog.ts";
 
 const assets = "https://unpkg.com/@phosphor-icons/core@2.1.1/assets/";
@@ -38,10 +39,6 @@ export class Phosphor implements Catalog<PhosphorIcon> {
     this.defaultType = options.defaultType;
   }
 
-  get icons(): string[] {
-    return icons.map((icon) => icon.name);
-  }
-
   get(name: string, type?: Type): Promise<string> {
     const info = this.info(name);
     const iconType = type || this.defaultType;
@@ -60,16 +57,4 @@ export class Phosphor implements Catalog<PhosphorIcon> {
 
     return icon;
   }
-}
-
-const cache = new Map<string, Promise<string>>();
-
-function fetchIcon(url: string): Promise<string> {
-  if (cache.has(url)) {
-    return cache.get(url)!;
-  }
-
-  const promise = fetch(url).then((res) => res.text());
-  cache.set(url, promise);
-  return promise;
 }

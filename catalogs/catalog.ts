@@ -3,9 +3,6 @@ export interface Catalog<T = any> {
   /** The name of the catalog */
   name: string;
 
-  /** The list of all icons in the catalog */
-  icons: string[];
-
   /** Get the SVG source of an icon by name */
   get(name: string, options?: any): string | Promise<string>;
 
