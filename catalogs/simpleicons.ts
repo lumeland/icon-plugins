@@ -1,5 +1,5 @@
-import * as si from "npm:simple-icons@12.2.0";
-import type { SimpleIcon } from "npm:simple-icons@12.2.0";
+import * as si from "npm:simple-icons@13.1.0";
+import type { SimpleIcon } from "npm:simple-icons@13.1.0";
 import type { Catalog } from "./catalog.ts";
 
 const icons = Object.values(si) as SimpleIcon[];

@@ -1,4 +1,4 @@
-import { assertEquals } from "jsr:@std/assert@0.226.0/assert-equals";
+import { assertEquals } from "jsr:@std/assert@1.0.0/equals";
 import phosphor from "./catalogs/phosphor.ts";
 import simpleIcons from "./catalogs/simpleicons.ts";
 import heroIcons from "./catalogs/heroicons.ts";
