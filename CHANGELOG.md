@@ -7,6 +7,7 @@ project adheres to [Semantic Versioning](https://semver.org/).
 ## [0.1.3] - Unreleased
 ### Added
 - Material Design icons catalog.
+- Material Symbols catalog.
 
 ### Fixed
 - Heroicons catalog.

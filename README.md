@@ -64,7 +64,11 @@ In your templates:
 {{ "face-smile" |> heroicons("outline") }} # Returns the icon with outline style
 ```
 
-### [Material icons](https://fonts.google.com/icons)
+### [Material icons](https://fonts.google.com/icons?icon.set=Material+Icons)
+
+> [!note]
+>
+> Material icons are deprecated. Use Material Symbols instead.
 
 ```ts
 import lume from "lume/mod.ts";
@@ -81,5 +85,25 @@ In your templates:
 
 ```
 {{ "home" |> material }} # SVG code of the icon
-{{ "home" |> heroicons("rounded") }} # Returns the icon with rounded style
+{{ "home" |> material("rounded") }} # Returns the icon with rounded style
+```
+
+### [Material symbols](https://fonts.google.com/icons?icon.set=Material+Symbols)
+
+```ts
+import lume from "lume/mod.ts";
+import material from "lume_icon_plugins/material_symbols.ts";
+
+const site = lume();
+
+site.use(material());
+
+export site;
+```
+
+In your templates:
+
+```
+{{ "home" |> material }} # SVG code of the icon
+{{ "home" |> material("rounded") }} # Returns the icon with rounded style
 ```
