@@ -41,7 +41,7 @@ In your templates:
 
 ```
 {{ "acorn" |> phosphor }} # SVG code of the icon
-{{ "acorn" |> phosphor("duotone") }} # Returns the icon in duotone format
+{{ "acorn" |> phosphor("duotone") }} # Returns the icon with duotone style
 ```
 
 ### [Heroicons](https://heroicons.com/)
@@ -61,5 +61,25 @@ In your templates:
 
 ```
 {{ "face-smile" |> heroicons }} # SVG code of the icon
-{{ "face-smile" |> heroicons("outline") }} # Returns the icon in outline format
+{{ "face-smile" |> heroicons("outline") }} # Returns the icon with outline style
+```
+
+### [Material icons](https://fonts.google.com/icons)
+
+```ts
+import lume from "lume/mod.ts";
+import material from "lume_icon_plugins/material.ts";
+
+const site = lume();
+
+site.use(material());
+
+export site;
+```
+
+In your templates:
+
+```
+{{ "home" |> material }} # SVG code of the icon
+{{ "home" |> heroicons("rounded") }} # Returns the icon with rounded style
 ```

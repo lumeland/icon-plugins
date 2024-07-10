@@ -1,7 +1,7 @@
 import heroicons, {
   type Options as HeroiconsOptions,
   type Type as HeroiconsType,
-} from "./catalogs/phosphor.ts";
+} from "./catalogs/heroicons.ts";
 
 export interface Options extends HeroiconsOptions {
   /** Filter name */
@@ -9,7 +9,7 @@ export interface Options extends HeroiconsOptions {
 }
 
 export const defaults: Options = {
-  defaultType: "regular",
+  defaultType: "solid",
   name: "heroicons",
 };
 
