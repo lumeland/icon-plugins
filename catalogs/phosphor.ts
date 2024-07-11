@@ -2,7 +2,8 @@ import { icons as pi } from "npm:@phosphor-icons/core@2.1.1";
 import { fetchIcon } from "./utils.ts";
 import type { Catalog } from "./catalog.ts";
 
-const assets = "https://unpkg.com/@phosphor-icons/core@2.1.1/assets/";
+const assets =
+  "https://cdn.jsdelivr.net/npm/@phosphor-icons/core@2.1.1/assets/";
 
 export type Type = "bold" | "duotone" | "fill" | "light" | "regular" | "thin";
 

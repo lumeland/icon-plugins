@@ -1,7 +1,8 @@
 import type { Catalog } from "./catalog.ts";
 import { fetchIcon } from "./utils.ts";
 
-const assets = "https://unpkg.com/@material-design-icons/svg@0.14.13";
+const assets =
+  "https://cdn.jsdelivr.net/npm/@material-design-icons/svg@0.14.13";
 
 export type Type = "filled" | "outlined" | "round" | "sharp" | "two-tone";
 

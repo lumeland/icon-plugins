@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.2.1] - 2024-07-11
+### Changed
+- Switch from unpkg to jsDelivr.
+- Warn when a svg file couldn't be downloaded.
+
 ## [0.2.0] - 2024-07-10
 ### Added
 - Material Design icons catalog.
@@ -27,6 +32,7 @@ project adheres to [Semantic Versioning](https://semver.org/).
 ## [0.1.0] - 2024-06-15
 First version
 
+[0.2.1]: https://github.com/lumeland/icon-plugins/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/lumeland/icon-plugins/compare/v0.1.2...v0.2.0
 [0.1.2]: https://github.com/lumeland/icon-plugins/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/lumeland/icon-plugins/compare/v0.1.0...v0.1.1

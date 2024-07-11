@@ -1,7 +1,7 @@
 import type { Catalog } from "./catalog.ts";
 import { fetchIcon } from "./utils.ts";
 
-const assets = "https://unpkg.com/heroicons@2.1.5";
+const assets = "https://cdn.jsdelivr.net/npm/heroicons@2.1.5";
 
 export type Type = "outline" | "solid" | "mini" | "micro";
 
