@@ -4,6 +4,7 @@ import simpleIcons from "./catalogs/simpleicons.ts";
 import heroIcons from "./catalogs/heroicons.ts";
 import material from "./catalogs/material.ts";
 import materialSymbols from "./catalogs/material_symbols.ts";
+import lucide from "./catalogs/lucide.ts";
 
 Deno.test("Phosphor", async () => {
   const catalog = phosphor();
@@ -62,5 +63,34 @@ Deno.test("Material symbols", async () => {
   assertEquals(
     await catalog.get("10k"),
     `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 -960 960 960"><path d="M286-360h50v-240H180v50h106v190Zm120 0h104q14.03 0 23.51-9.49Q543-378.98 543-393v-173q0-14.45-9.49-24.22Q524.03-600 510-600H406q-14.02 0-23.51 9.78Q373-580.45 373-566v173q0 14.02 9.49 23.51Q391.98-360 406-360Zm17-50v-140h70v140h-70Zm157 50h50v-90l84 90h66L668-480l112-120h-66l-84 90v-90h-50v240ZM180-120q-24 0-42-18t-18-42v-600q0-24 18-42t42-18h600q24 0 42 18t18 42v600q0 24-18 42t-42 18H180Zm0-60h600v-600H180v600Zm0-600v600-600Z"/></svg>`,
+  );
+});
+
+Deno.test("Lucide", async () => {
+  const catalog = lucide();
+
+  assertEquals(
+    await catalog.get("alarm-clock"),
+    `<!-- @license lucide-static v0.407.0 - ISC -->
+<svg
+  class="lucide lucide-alarm-clock"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="13" r="8" />
+  <path d="M12 9v4l2 2" />
+  <path d="M5 3 2 6" />
+  <path d="m22 6-3-3" />
+  <path d="M6.38 18.7 4 21" />
+  <path d="M17.64 18.67 20 21" />
+</svg>
+`,
   );
 });

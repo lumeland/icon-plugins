@@ -107,3 +107,22 @@ In your templates:
 {{ "home" |> material }} # SVG code of the icon
 {{ "home" |> material("rounded") }} # Returns the icon with rounded style
 ```
+
+### [Lucide](https://lucide.dev/)
+
+```ts
+import lume from "lume/mod.ts";
+import material from "lume_icon_plugins/lucide.ts";
+
+const site = lume();
+
+site.use(lucide());
+
+export site;
+```
+
+In your templates:
+
+```
+{{ "activity" |> lucide }} # SVG code of the icon
+```
