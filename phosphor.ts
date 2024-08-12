@@ -13,7 +13,7 @@ export const defaults: Options = {
   name: "phosphor",
 };
 
-export default function plugin(userOptions?: Options) {
+export default function plugin(userOptions?: Partial<Options>) {
   const options = { ...defaults, ...userOptions };
   const catalog = phosphor(options);
 

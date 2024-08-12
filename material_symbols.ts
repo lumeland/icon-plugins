@@ -15,7 +15,7 @@ export const defaults: Options = {
   name: "material",
 };
 
-export default function plugin(userOptions?: Options) {
+export default function plugin(userOptions?: Partial<Options>) {
   const options = { ...defaults, ...userOptions };
   const catalog = material(options);
 

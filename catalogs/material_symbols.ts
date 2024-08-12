@@ -4,13 +4,13 @@ import { fetchIcon } from "./utils.ts";
 export type Weight = 100 | 200 | 300 | 400 | 500 | 600 | 700;
 
 const assets: Record<Weight, string> = {
-  100: "https://cdn.jsdelivr.net/npm/@material-symbols/svg-100@0.21.0",
-  200: "https://cdn.jsdelivr.net/npm/@material-symbols/svg-200@0.21.0",
-  300: "https://cdn.jsdelivr.net/npm/@material-symbols/svg-300@0.21.0",
-  400: "https://cdn.jsdelivr.net/npm/@material-symbols/svg-400@0.21.0",
-  500: "https://cdn.jsdelivr.net/npm/@material-symbols/svg-500@0.21.0",
-  600: "https://cdn.jsdelivr.net/npm/@material-symbols/svg-600@0.21.0",
-  700: "https://cdn.jsdelivr.net/npm/@material-symbols/svg-700@0.21.0",
+  100: "https://cdn.jsdelivr.net/npm/@material-symbols/svg-100@0.22.0",
+  200: "https://cdn.jsdelivr.net/npm/@material-symbols/svg-200@0.22.0",
+  300: "https://cdn.jsdelivr.net/npm/@material-symbols/svg-300@0.22.0",
+  400: "https://cdn.jsdelivr.net/npm/@material-symbols/svg-400@0.22.0",
+  500: "https://cdn.jsdelivr.net/npm/@material-symbols/svg-500@0.22.0",
+  600: "https://cdn.jsdelivr.net/npm/@material-symbols/svg-600@0.22.0",
+  700: "https://cdn.jsdelivr.net/npm/@material-symbols/svg-700@0.22.0",
 };
 
 export type Type = "outlined" | "rounded" | "sharp";
