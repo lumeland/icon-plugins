@@ -1,7 +1,7 @@
 import type { Catalog } from "./catalog.ts";
 import { fetchIcon } from "./utils.ts";
 
-const assets = "https://cdn.jsdelivr.net/gh/Richard9394/MingCute@2.95";
+const assets = "https://cdn.jsdelivr.net/npm/remixicon@4.3.0";
 
 export type Type = "fill" | "line";
 
@@ -14,11 +14,11 @@ export const defaults: Options = {
 };
 
 export default function (options: Options = defaults) {
-  return new MingCute(options);
+  return new Remix(options);
 }
 
-export class MingCute implements Catalog<void> {
-  name = "mingcute";
+export class Remix implements Catalog<void> {
+  name = "remix";
   defaultType: Type;
 
   constructor(options: Options = defaults) {
@@ -27,11 +27,15 @@ export class MingCute implements Catalog<void> {
 
   get(name: string, type?: Type): Promise<string> {
     const iconType = type || this.defaultType;
-    const url = `${assets}/svg/${name}_${iconType}.svg`;
+    const url = `${assets}/icons/${capitalize(name)}-${iconType}.svg`;
     return fetchIcon(url);
   }
 
   info() {
-    throw new Error("Not info available for MingCute icons");
+    throw new Error("Not info available for Remix icons");
   }
+}
+
+function capitalize(s: string) {
+  return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
 }

@@ -164,3 +164,22 @@ In your templates:
 ```
 {{ "arrow/align_arrow_up" |> mingcute }} # SVG code of the icon
 ```
+
+### [Remix](https://remixicon.com/)
+
+```ts
+import lume from "lume/mod.ts";
+import remix from "lume_icon_plugins/remix.ts";
+
+const site = lume();
+
+site.use(remix());
+
+export site;
+```
+
+In your templates:
+
+```
+{{ "arrows/arrow-up" |> remix }} # SVG code of the icon
+```
