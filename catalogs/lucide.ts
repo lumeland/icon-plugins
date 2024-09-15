@@ -1,7 +1,7 @@
 import type { Catalog } from "./catalog.ts";
 import { fetchIcon } from "./utils.ts";
 
-const assets = "https://cdn.jsdelivr.net/npm/lucide-static@0.427.0";
+const assets = "https://cdn.jsdelivr.net/npm/lucide-static@0.441.0";
 
 export default function () {
   return new Lucide();
