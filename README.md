@@ -162,7 +162,7 @@ export site;
 In your templates:
 
 ```
-{{ "arrow/align_arrow_up" |> mingcute }} # SVG code of the icon
+{{ "arrow/align_arrow_up_fill" |> mingcute }} # SVG code of the icon
 ```
 
 ### [Remix](https://remixicon.com/)
@@ -181,5 +181,24 @@ export site;
 In your templates:
 
 ```
-{{ "arrows/arrow-up" |> remix }} # SVG code of the icon
+{{ "arrows/arrow-up-fill" |> remix }} # SVG code of the icon
+```
+
+### [Bootstrap](https://icons.getbootstrap.com/)
+
+```ts
+import lume from "lume/mod.ts";
+import bootstrap from "lume_icon_plugins/bootstrap.ts";
+
+const site = lume();
+
+site.use(bootstrap());
+
+export site;
+```
+
+In your templates:
+
+```
+{{ "0-circle" |> bootstrap }} # SVG code of the icon
 ```

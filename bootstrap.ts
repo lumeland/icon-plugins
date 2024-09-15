@@ -1,4 +1,4 @@
-import mingcute from "./catalogs/mingcute.ts";
+import bootstrap from "./catalogs/bootstrap.ts";
 
 export interface Options {
   /** Filter name */
@@ -6,12 +6,12 @@ export interface Options {
 }
 
 export const defaults: Options = {
-  name: "mingcute",
+  name: "bootstrap",
 };
 
 export default function plugin(userOptions?: Partial<Options>) {
   const options = { ...defaults, ...userOptions };
-  const catalog = mingcute();
+  const catalog = bootstrap();
 
   return (site: Lume.Site) => {
     site.filter(options.name, (name: string) => {

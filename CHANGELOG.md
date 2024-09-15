@@ -9,6 +9,7 @@ project adheres to [Semantic Versioning](https://semver.org/).
 - Tabler icons catalog.
 - MingCute icons catalog.
 - Remix icons catalog.
+- Bootstrap icons catalog.
 
 ### Fixed
 - Updated icons: `lucide`, `simple-icons`, `material-symbols`.

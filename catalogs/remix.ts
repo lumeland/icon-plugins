@@ -3,31 +3,15 @@ import { fetchIcon } from "./utils.ts";
 
 const assets = "https://cdn.jsdelivr.net/npm/remixicon@4.3.0";
 
-export type Type = "fill" | "line";
-
-export interface Options {
-  defaultType: Type;
-}
-
-export const defaults: Options = {
-  defaultType: "fill",
-};
-
-export default function (options: Options = defaults) {
-  return new Remix(options);
+export default function () {
+  return new Remix();
 }
 
 export class Remix implements Catalog<void> {
   name = "remix";
-  defaultType: Type;
 
-  constructor(options: Options = defaults) {
-    this.defaultType = options.defaultType;
-  }
-
-  get(name: string, type?: Type): Promise<string> {
-    const iconType = type || this.defaultType;
-    const url = `${assets}/icons/${capitalize(name)}-${iconType}.svg`;
+  get(name: string): Promise<string> {
+    const url = `${assets}/icons/${capitalize(name)}.svg`;
     return fetchIcon(url);
   }
 
