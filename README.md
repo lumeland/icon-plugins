@@ -112,7 +112,7 @@ In your templates:
 
 ```ts
 import lume from "lume/mod.ts";
-import material from "lume_icon_plugins/lucide.ts";
+import lucide from "lume_icon_plugins/lucide.ts";
 
 const site = lume();
 
@@ -125,4 +125,42 @@ In your templates:
 
 ```
 {{ "activity" |> lucide }} # SVG code of the icon
+```
+
+### [Tabler](https://tabler.io/icons)
+
+```ts
+import lume from "lume/mod.ts";
+import tabler from "lume_icon_plugins/tabler.ts";
+
+const site = lume();
+
+site.use(tabler());
+
+export site;
+```
+
+In your templates:
+
+```
+{{ "ad-circle" |> tabler }} # SVG code of the icon
+```
+
+### [MingCute](https://www.mingcute.com/)
+
+```ts
+import lume from "lume/mod.ts";
+import mingcute from "lume_icon_plugins/mingcute.ts";
+
+const site = lume();
+
+site.use(mingcute());
+
+export site;
+```
+
+In your templates:
+
+```
+{{ "arrow/align_arrow_up" |> mingcute }} # SVG code of the icon
 ```

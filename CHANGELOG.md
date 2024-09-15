@@ -6,7 +6,8 @@ project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [0.2.4] - Unreleased
 ### Add
-- Tabler icons.
+- Tabler icons catalog.
+- MingCute icons catalog.
 
 ### Fixed
 - Updated icons: `lucide`, `simple-icons`, `material-symbols`.
